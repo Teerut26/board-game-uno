@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import { useParams } from "react-router-dom";
 import QRCode from "qrcode";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";

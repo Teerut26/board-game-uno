@@ -1,9 +1,9 @@
 import styled from "@emotion/styled";
-import React, { useState } from "react";
+import React from "react";
 import QrCodeIcon from "@mui/icons-material/QrCode";
 import TitleIcon from "@mui/icons-material/Title";
 import tw from "twin.macro";
-import { Outlet, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 interface Props {}
 
