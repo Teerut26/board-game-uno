@@ -9,6 +9,7 @@ export interface GameInterface {
 }
 
 export interface PlayerInterface {
+    id: string;
     name: string;
     hand: CardInterface[];
     score: number;

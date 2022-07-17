@@ -1,14 +1,16 @@
 import React from "react";
+import { PlayerInterface } from "../interfaces/GameInterface";
 import Player from "./Player";
 
+interface Props {
+    players: PlayerInterface[];
+}
 
-interface Props {}
-
-const PlayerList: React.FC<Props> = () => {
+const PlayerList: React.FC<Props> = ({ players }) => {
     return (
         <div className="flex gap-3 flex-row flex-wrap justify-center max-w-2xl mx-auto">
-            {[...new Array(6)].map((_, index) => (
-                <Player />
+            {players.map((player, index) => (
+                <Player key={index} player={player} />
             ))}
         </div>
     );
