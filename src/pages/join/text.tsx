@@ -1,10 +1,10 @@
 import { createTheme, TextField, ThemeProvider } from "@mui/material";
-import { onValue, ref, set, update } from "firebase/database";
+import { onValue, ref, set } from "firebase/database";
 import React, { useState } from "react";
 import { useLocalStorage } from "usehooks-ts";
 import { v4 as uuidv4 } from "uuid";
 import { database } from "../../config/firebase";
-import { GameInterface, PlayerInterface } from "../../interfaces/GameInterface";
+import { PlayerInterface } from "../../interfaces/GameInterface";
 
 const theme = createTheme({
     typography: {
@@ -40,7 +40,6 @@ const Text: React.FC<Props> = () => {
         }
 
         const playerUUID = uuidv4();
-        // const roomRef = ref(database, "/rooms/" + RoomCode + "/players/" +);
 
         set(ref(database, "/rooms/" + RoomCode + "/players/" + playerUUID), {
             id: playerUUID,
